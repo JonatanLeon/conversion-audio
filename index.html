@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Compresor de audio</title>
+
+  <link rel="stylesheet" href="assets/css/style.css?v=1.0">
+
+</head>
+
+<body>
+
+	</style>
+	<div id="tool" class="container at">
+	<div class="row">
+		<div class="col-12 col-lg-8 col-md-8 col-sm-12 desc right">
+			<h5>Subir archivo de audio</h5>
+			<fieldset>
+				<div class="section">
+					<input type="file" id="audio-file" name="audio-file" class="i_f" accept="audio/mpeg, audio/ogg, audio/*" /><label for="audio-file" class="btn btn-outline-primary">Upload</label><script>var inputs=document.querySelectorAll(".i_f");Array.prototype.forEach.call(inputs,function(n){var e=n.nextElementSibling,t=e.innerHTML;n.addEventListener("change",function(n){var r;r=n.target.value.split("\\").pop(),e.innerHTML=r||t})});</script>
+					<div id="upload_err" class="d-none" style="color: red;">No se ha subido ningún archivo</div>
+				</div>
+				<div class="section">
+					<button type="button" id="compress_btn" class="btn btn-outline-primary">Comprimir</button>
+				</div>
+			</fieldset>
+			<div>
+				<div id="log" class="log"></div>
+				<a href="" id="download_link" class="d-none download"><button type="button" class="btn btn-outline-primary">Descargar archivo</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <script src="assets/js/lib/jQuery-3.3.1/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
